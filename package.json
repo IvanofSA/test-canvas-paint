@@ -4,7 +4,13 @@
   "description": "Boilerplate for es6-projects",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:symfony": "gulp serve",
+    "serve:local": "gulp serve --locally",
+    "dist": "gulp dist --optimize-images",
+    "build:symfony": "gulp dist",
+    "build:local": "gulp dist --locally",
+    "lint": "gulp lint"
   },
   "repository": {
     "type": "git",
@@ -47,5 +53,8 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-if": "^2.0.2",
+    "yargs": "^7.0.2"
+  }
 }
