@@ -9,6 +9,7 @@ import buffer from "vinyl-buffer";
 import gulpLoadPlugins from "gulp-load-plugins";
 import runSequence from "run-sequence";
 import inject from "gulp-inject";
+import fs from "fs";
 
 import yargs from "yargs";
 const args = yargs.argv;
@@ -33,8 +34,20 @@ const shortLocalDestPathFlag = args["l"];
 const longLocalDestPathFlag = args["locally"];
 const localDestPathFlag = shortLocalDestPathFlag || longLocalDestPathFlag;
 
-const PUBLIC_DIR = localDestPathFlag ? './public' : './web/bundles/frontend';
-const SOURCES_DIR = './sources';
+// detecting path (if ./frontend/ exists)
+function fsExistsSync(myDir) {
+	try {
+		fs.accessSync(myDir);
+		return true;
+	} catch (e) {
+		return false;
+	}
+}
+
+const isFrontendDirExists = fsExistsSync('frontend');
+
+const PUBLIC_DIR = localDestPathFlag ? (isFrontendDirExists ? './frontend/public' :'./public') : './web/bundles/frontend';
+const SOURCES_DIR = isFrontendDirExists ? './frontend/sources' : './sources';
 
 let sassConfig = {
 	sassPath: './' + SOURCES_DIR + '/css',
@@ -231,7 +244,7 @@ gulp.task('indexGenerate', () => {
 			gulp.src([PUBLIC_DIR + '/*.html'], {read: false}), {
 				transform: function (filepath) {
 					if (filepath.slice(-5) === '.html') {
-						let regName = /(\/public\/)|(\.html)/gi,
+						let regName = isFrontendDirExists ? /(\/frontend\/public\/)|(\.html)/gi : /(\/public\/)|(\.html)/gi,
 							fileName = filepath.replace(regName, ''),
 							cleanPath = fileName + '.html';
 
