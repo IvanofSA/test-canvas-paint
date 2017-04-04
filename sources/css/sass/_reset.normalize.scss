@@ -13,6 +13,7 @@ body{
 	-ms-text-size-adjust: none;
 	text-size-adjust: none;
 
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 
@@ -69,32 +70,45 @@ input{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	background: transparent;
 
 	&::-webkit-input-placeholder{
 		color:currentColor;
+		opacity: 0.5;
 		text-overflow:ellipsis;
-		@include transition(opacity 0.25s ease);
+		@include transition(opacity, 0.25s ease);
 	}
 	&::-moz-placeholder{
 		color:currentColor;
+		opacity: 0.5;
 		text-overflow:ellipsis;
-		@include transition(opacity 0.25s ease);
+		@include transition(opacity, 0.25s ease);
 	}
 	&:-moz-placeholder{
 		color:currentColor;
+		opacity: 0.5;
 		text-overflow:ellipsis;
-		@include transition(opacity 0.25s ease);
+		@include transition(opacity, 0.25s ease);
 	}
 	&:-ms-input-placeholder{
 		color:currentColor;
+		opacity: 0.5;
 		text-overflow:ellipsis;
-		@include transition(opacity 0.25s ease);
+		@include transition(opacity, 0.25s ease);
 	}
 
-	&:focus::-webkit-input-placeholder{ opacity: 0; }
-	&:focus::-moz-placeholder{ opacity: 0; }
-	&:focus:-moz-placeholder{ opacity: 0; }
-	&:focus:-ms-input-placeholder{ opacity: 0; }
+	&:focus::-webkit-input-placeholder{
+		opacity: 0;
+	}
+	&:focus::-moz-placeholder{
+		opacity: 0;
+	}
+	&:focus:-moz-placeholder{
+		opacity: 0;
+	}
+	&:focus:-ms-input-placeholder{
+		opacity: 0;
+	}
 
 	&::-moz-focus-inner {
 		border: 0;
@@ -122,6 +136,9 @@ input{
 		&::-ms-clear {
 			display: none;
 		}
+	}
+	&[type="submit"]{
+		cursor: pointer;
 	}
 }
 
