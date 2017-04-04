@@ -1,4 +1,6 @@
 /* CSS Reset section */
+@import '_reset.mediaprint.scss';
+@import '_reset.normalize.scss';
 
 html {
 	width:100%;

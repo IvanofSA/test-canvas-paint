@@ -1,8 +1,8 @@
-body{
+body {
 	line-height: 1;
 }
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	//vertical-align: baseline;
@@ -13,23 +13,21 @@ body{
 	-ms-text-size-adjust: none;
 	text-size-adjust: none;
 
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 
 	&:active,
-	&:focus{
+	&:focus {
 		outline: none;
 	}
 }
-
-
 
 ol, ul {
 	list-style: none;
 }
 
-a{
+a {
 	color: inherit;
 }
 
@@ -48,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
-
 blockquote, q {
 	quotes: none;
 
@@ -62,7 +59,7 @@ blockquote, q {
 select,
 textarea,
 button,
-input{
+input {
 	font: inherit;
 	color: inherit;
 	overflow: visible;
@@ -72,41 +69,41 @@ input{
 	appearance: none;
 	background: transparent;
 
-	&::-webkit-input-placeholder{
-		color:currentColor;
+	&::-webkit-input-placeholder {
+		color: currentColor;
 		opacity: 0.5;
-		text-overflow:ellipsis;
-		@include transition(opacity, 0.25s ease);
+		text-overflow: ellipsis;
+		@include transition(opacity 0.25s ease);
 	}
-	&::-moz-placeholder{
-		color:currentColor;
+	&::-moz-placeholder {
+		color: currentColor;
 		opacity: 0.5;
-		text-overflow:ellipsis;
-		@include transition(opacity, 0.25s ease);
+		text-overflow: ellipsis;
+		@include transition(opacity 0.25s ease);
 	}
-	&:-moz-placeholder{
-		color:currentColor;
+	&:-moz-placeholder {
+		color: currentColor;
 		opacity: 0.5;
-		text-overflow:ellipsis;
-		@include transition(opacity, 0.25s ease);
+		text-overflow: ellipsis;
+		@include transition(opacity 0.25s ease);
 	}
-	&:-ms-input-placeholder{
-		color:currentColor;
+	&:-ms-input-placeholder {
+		color: currentColor;
 		opacity: 0.5;
-		text-overflow:ellipsis;
-		@include transition(opacity, 0.25s ease);
+		text-overflow: ellipsis;
+		@include transition(opacity 0.25s ease);
 	}
 
-	&:focus::-webkit-input-placeholder{
+	&:focus::-webkit-input-placeholder {
 		opacity: 0;
 	}
-	&:focus::-moz-placeholder{
+	&:focus::-moz-placeholder {
 		opacity: 0;
 	}
-	&:focus:-moz-placeholder{
+	&:focus:-moz-placeholder {
 		opacity: 0;
 	}
-	&:focus:-ms-input-placeholder{
+	&:focus:-ms-input-placeholder {
 		opacity: 0;
 	}
 
@@ -116,13 +113,13 @@ input{
 	}
 }
 
-textarea{
+textarea {
 	resize: none;
 	overflow: auto;
 }
 
-input{
-	&[type="search"]{
+input {
+	&[type="search"] {
 		&::-webkit-search-cancel-button,
 		&::-webkit-search-decoration {
 			-webkit-appearance: none;
@@ -137,12 +134,12 @@ input{
 			display: none;
 		}
 	}
-	&[type="submit"]{
+	&[type="submit"] {
 		cursor: pointer;
 	}
 }
 
-label{
+label {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -153,20 +150,16 @@ label{
 	display: none;
 }
 
-
-
-
-
-
 /* mixins */
 
-@mixin clearfixTop(){
+@mixin clearfixTop() {
 	&:before {
 		content: "";
 		display: table;
 	}
 }
-@mixin clearfixBottom(){
+
+@mixin clearfixBottom() {
 	&:after {
 		content: "";
 		display: table;
