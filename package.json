@@ -44,6 +44,7 @@
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^3.0.0",
     "imagemin-optipng": "^4.3.0",
     "lodash": "^4.15.0",
     "open": "0.0.5",
