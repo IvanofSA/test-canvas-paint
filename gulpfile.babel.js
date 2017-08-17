@@ -312,6 +312,7 @@ function makeBundle (name, bundlename, cb) {
 		.pipe(source(bundlename))
 		.pipe(buffer())
 		.pipe($.sourcemaps.init({loadMaps: true}))
+		.pipe($.uglify({compress:false}))
 		.pipe($.sourcemaps.write('./'))
 		.pipe(gulp.dest(PUBLIC_DIR + '/js/'))
 		.pipe(reload({stream: true}));
