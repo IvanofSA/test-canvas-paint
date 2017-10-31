@@ -6,7 +6,7 @@ block vars
 block head
 
 block content
-	.container
+	.container#container
 		.left-col
 			.btns__row
 				a(href="#").btn.btn-clear Очистить
@@ -27,11 +27,12 @@ block content
 				a(href="#" data-name="marker").btn.btn-tool Маркер
 				a(href="#" data-name="rectangle").btn.btn-tool Прямоугольник
 				a(href="#" data-name="line").btn.btn-tool Линии
-				a(href="#" data-name="eraser").btn.btn-tool.btn-tool--eraser Маркер
+				a(href="#" data-name="eraser").btn.btn-tool.btn-tool--eraser eraser
 
 			.btns__row
-				a(href="#").btn.btn-save#saveCanvas Сохранить
+				a(href="#" download="image.png").btn.btn-save#saveCanvas Сохранить
 
 		.right-col
 			.canvasDiv
 				canvas#canvasTemp.canvas-temp(width="400" height="300")
+				canvas#canvasCopy.canvas-copy(width="400" height="300")

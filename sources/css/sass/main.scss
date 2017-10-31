@@ -20,8 +20,17 @@
   flex-flow: column wrap;
 }
 .canvas-temp {
+  position: absolute;
+  box-sizing: border-box;
   border: 1px solid #000;
 }
+
+.canvas-copy {
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
 .btns__row {
   display: flex;
   flex-flow: row wrap;
@@ -48,17 +57,17 @@
     height: 50px;
   }
   &-color-1 {
-    background: purple;
+    background-color: #800080;
   }
   &-color-2 {
-    background: green;
+    background-color: #008000;
   ;
   }
   &-color-3 {
-    background: yellow;
+    background-color: #FFFF00;
   }
   &-color-4 {
-    background: brown;
+    background-color: #A52A2A;
   }
 
   &-size-1 {
