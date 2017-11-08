@@ -87,3 +87,16 @@
     height: 50px;
   }
 }
+
+.range-size {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.range-size_current-value {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
