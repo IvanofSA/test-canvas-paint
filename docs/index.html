@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if gt IE 8]><html><![endif]-->
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!--script(src="/js/require.js")-->
+		<title>HTML Page</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="website">
+				<div class="container" id="container">
+					<div class="left-col">
+						<div class="btns__row"><a class="btn btn-clear" href="#">Очистить</a></div>
+						<div class="btns__row"><a class="btn btn-color btn-color-1" href="#" id="colorPurple"></a><a class="btn btn-color btn-color-2" href="#" id="colorGreen"></a><a class="btn btn-color btn-color-3" href="#" id="colorYellow"></a><a class="btn btn-color btn-color-4" href="#" id="colorBrown"></a></div>
+						<div class="range__row">
+							<input class="range-size" type="range" min="1" max="500" value="1">
+							<div class="range-size_current-value">1</div>
+						</div>
+						<div class="btns__row"><a class="btn btn-tool" href="#" data-name="marker">Маркер</a><a class="btn btn-tool" href="#" data-name="rectangle">Прямоугольник</a><a class="btn btn-tool" href="#" data-name="line">Линии</a><a class="btn btn-tool btn-tool--eraser" href="#" data-name="eraser">eraser</a></div>
+						<div class="btns__row"><a class="btn btn-save" href="#" download="image.png" id="saveCanvas">Сохранить</a></div>
+					</div>
+					<div class="right-col">
+						<div class="canvasDiv">
+							<canvas class="canvas-temp" id="canvasTemp" width="400" height="300"></canvas>
+							<canvas class="canvas-copy" id="canvasCopy" width="400" height="300"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/main.bundle.js"></script>
+		<!--script(src="/js/vendor.js")-->
+	</body>
+
+</html>
